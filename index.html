@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Safe Harbor — Help for Elderly &amp; Women in Need</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      Safe Harbor
+    </a>
+    <nav class="header-nav" aria-label="Primary">
+      <a href="#resources">Find help</a>
+      <a href="#request">Request help</a>
+      <a href="#about">About</a>
+    </nav>
+    <a href="tel:911" class="emergency-pill">Emergency? Call 911</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Springfield &amp; surrounding area</p>
+      <h1>A light toward safety, for elderly and women who need it most.</h1>
+      <p class="hero-sub">
+        Free shelter, food, health care, and legal help — found in a few taps,
+        no forms, no judgment.
+      </p>
+      <div class="hero-actions">
+        <a href="#resources" class="btn btn-primary">Find help nearby</a>
+        <a href="#request" class="btn btn-ghost">Ask us directly</a>
+      </div>
+    </div>
+    <div class="beam" aria-hidden="true"></div>
+  </section>
+
+  <section class="quick-categories" aria-label="Quick categories">
+    <button class="cat-chip" data-category="all">All</button>
+    <button class="cat-chip" data-category="shelter">Shelter</button>
+    <button class="cat-chip" data-category="women">Women's safety</button>
+    <button class="cat-chip" data-category="elderly">Elderly support</button>
+    <button class="cat-chip" data-category="food">Food</button>
+    <button class="cat-chip" data-category="health">Health</button>
+    <button class="cat-chip" data-category="legal">Legal aid</button>
+  </section>
+
+  <section id="resources" class="resources">
+    <div class="section-heading">
+      <h2>Find help nearby</h2>
+      <input type="search" id="search-input" placeholder="Search by name or area…" aria-label="Search resources" />
+    </div>
+    <div id="resource-list" class="resource-grid" aria-live="polite">
+      <p class="loading-note">Loading resources…</p>
+    </div>
+  </section>
+
+  <div class="beam beam-thin" aria-hidden="true"></div>
+
+  <section id="request" class="request-section">
+    <div class="section-heading">
+      <h2>Ask us directly</h2>
+      <p>If you can't find what you need above, tell us your situation. A volunteer reviews every message.</p>
+    </div>
+
+    <form id="help-form" class="help-form" novalidate>
+      <div class="form-row">
+        <label for="name">Your name <span class="optional">(optional)</span></label>
+        <input type="text" id="name" name="name" autocomplete="name" />
+      </div>
+
+      <div class="form-row">
+        <label for="contact">Best way to reach you <span class="optional">(optional)</span></label>
+        <input type="text" id="contact" name="contact" placeholder="Phone, or a place/time we can find you" />
+      </div>
+
+      <div class="form-row">
+        <label for="situation">What's going on? <span class="required">*</span></label>
+        <textarea id="situation" name="situation" rows="4" required
+          placeholder="For example: my mother, 74, needs a bed for tonight in Springfield."></textarea>
+      </div>
+
+      <fieldset class="urgency-fieldset">
+        <legend>How urgent is this?</legend>
+        <label><input type="radio" name="urgency" value="emergency" /> Tonight / emergency</label>
+        <label><input type="radio" name="urgency" value="soon" /> Within a few days</label>
+        <label><input type="radio" name="urgency" value="standard" checked /> Just exploring options</label>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary">Send request</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Safe Harbor</h2>
+    <p>
+      Safe Harbor is a volunteer-run directory connecting elderly people and women
+      facing homelessness with shelter, food, health care, and legal support in
+      Springfield. Every listing is checked by a local volunteer. This project is
+      open source — contributions and local resource updates are welcome.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Safe Harbor · If you are in immediate danger, call 911 or your local emergency number.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
